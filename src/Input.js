@@ -1,17 +1,18 @@
 import React,{useState} from 'react';
 
-function InputCurrency(){
-    const [originalCurrency, setOriginalCurrency] = useState("0,00");
+function InputCurrency({inputValue, onValueChange}){
 
     return(
     <>
-        <label htmlFor='originalCurrency'>Valor original: </label>
+        <label htmlFor='originalCurrency'>Valor original: <br/></label>
         <input
             id="originalCurrency"
             type="text" 
             placeholder="Digite o valor" 
-            value={originalCurrency}
-            onChange={(event) => {setOriginalCurrency(event.target.value)}}
+            value={inputValue}
+            onChange={(event) => {
+                onValueChange(event.target.value);
+            }}
         />
     </>
 )}
