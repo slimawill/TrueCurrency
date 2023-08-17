@@ -1,9 +1,8 @@
 import React from 'react';
 
 function Display({children, listaa, finalValue}){
-    console.log(listaa)
     return(
-        <div className="font-sans text-base h-fit leading-relaxed h-screen my-auto bg-gray-100">          
+        <div className="font-sans text-base leading-relaxed h-screen my-auto bg-gray-100">          
             <div className="max-w-2xl mx-auto p-8">  
                 <div className='mx-auto'>
                     {children[1]}<br/>

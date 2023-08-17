@@ -17,11 +17,12 @@ function App() {
     if (currencyList && currencyList[destinationCurrency]) {
       setMultiplicationFactor(currencyList[destinationCurrency]);
     } else {
-      setMultiplicationFactor(1);
+      setMultiplicationFactor("");
     }
   }, [currencyList, destinationCurrency]);
 
-  let finalValue = originValue*multiplicationFactor;
+ //let finalValue = originValue*multiplicationFactor;
+  let finalValue = multiplicationFactor? (originValue*multiplicationFactor).toFixed(3):"Moeda origem bloqueada por API";
 
   return (
     <>
