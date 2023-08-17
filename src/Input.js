@@ -1,7 +1,19 @@
-import React from 'react';
+import React,{useState} from 'react';
 
-function inputCurrency(){
+function InputCurrency(){
+    const [originalCurrency, setOriginalCurrency] = useState("0,00");
 
-}
+    return(
+    <>
+        <label htmlFor='originalCurrency'>Valor original: </label>
+        <input
+            id="originalCurrency"
+            type="text" 
+            placeholder="Digite o valor" 
+            value={originalCurrency}
+            onChange={(event) => {setOriginalCurrency(event.target.value)}}
+        />
+    </>
+)}
 
-export default inputCurrency;
+export default InputCurrency;
