@@ -177,7 +177,7 @@ function Options() {
     return (
         <>
             {Object.keys(currency).map((item) => (
-                <option key={item} value={item}>{item}</option>
+                <option className="" key={item} value={item}>{item}</option>
             ))}
         </>
     );

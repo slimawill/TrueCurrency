@@ -178,11 +178,12 @@ function SelectCurrency({nameCurrency, onChangeCurrency}){
     return(
         <>
             <label 
-                className='block mb-2 text-sm font-medium text-white'
+                className="font-semibold mb-2 block"
                 htmlFor={nameCurrency}>{nameCurrency}</label>
 
-            <select className=' text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500' 
+            <select className='w-full p-3 rounded bg-gray-200 border border-gray-300' 
                 name="originCurrency" 
+                onChange={(event) => {onChangeCurrency(event.target.value)}}
                 id={nameCurrency}>
                     <Options/>
             </select> 
