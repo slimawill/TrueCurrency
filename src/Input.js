@@ -7,7 +7,7 @@ function InputCurrency({inputValue, onValueChange}){
         <label htmlFor='originalCurrency'>Valor original: <br/></label>
         <input
             id="originalCurrency"
-            type="text" 
+            type="number" 
             placeholder="Digite o valor" 
             value={inputValue}
             onChange={(event) => {

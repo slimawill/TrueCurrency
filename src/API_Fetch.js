@@ -11,6 +11,7 @@ function API_Fetch({originCurrency, destinationCurrency, onConvert}) {
         console.log("trying")
         const response = await fetch(`http://data.fixer.io/api/latest?access_key=${YOUR_ACCESS_KEY}&base=${originCurrency}`)
         const data = await response.json()
+        console.log(data);
         onConvert(data.rates[destinationCurrency])};
 
     fetchs()

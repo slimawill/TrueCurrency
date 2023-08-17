@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InputCurrency from './Input';
 import API_Fetch from './API_Fetch';
+import SelectCurrency from './Selector';
 import './App.css';
 
 
@@ -14,6 +15,13 @@ function App() {
     <>
     <InputCurrency inputValue={originValue} onValueChange={setOriginValue}/>
     <API_Fetch originCurrency={originCurrency} destinationCurrency={destinationCurrency} onConvert={setMultiplicationFactor}/>
+    <SelectCurrency/>
+    <div>
+      <p>Valor original: {originValue}</p>
+      <p>Valor convertido: {originValue*multiplicationFactor}</p>
+      <p>Moeda original: {originCurrency}</p>
+      <p>Moeda convertida: {destinationCurrency}</p>
+    </div>
     </>
   );
 }
