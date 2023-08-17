@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 
 function API_Fetch({originCurrency, onDestinationCurrency, onUpdateList}) {
-  const YOUR_ACCESS_KEY = "a8c7df2f871b3d244303d316350ad7ad";
-  console.log(1);
+  const apiKey = process.env.REACT_APP_API_KEY;
 
   useEffect(() => {
 
     async function fetchs(){
-        const response = await fetch(`http://data.fixer.io/api/latest?access_key=${YOUR_ACCESS_KEY}&base=${originCurrency}`)
+        const response = await fetch(`http://data.fixer.io/api/latest?access_key=${apiKey}&base=${originCurrency}`)
         const data = await response.json();
         onUpdateList(data.rates)}
     fetchs()
