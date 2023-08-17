@@ -1,7 +1,25 @@
 import React from 'react';
 
-function outputCurrency(){
+function Display({children, finalValue}){
+    console.log(children);
+    return(
+        <div className='w-full h-full bg-blue-700'>            
+            <div>
+                {children[1]}<br/>
+                {children[3]}
+            </div>
+            <div>
+                {children[0]}
+            </div>
 
+            <div>
+                <h2>Valor final</h2>
+                <div>
+                    <h3>{finalValue}</h3>
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default outputCurrency;
+export default Display;

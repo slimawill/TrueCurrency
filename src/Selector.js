@@ -174,11 +174,17 @@ const currency = {
     "ZWL": 349.919574
 }
 
-function SelectCurrency(){
+function SelectCurrency({nameCurrency, onChangeCurrency}){
     return(
         <>
-            <select name="originCurrency" id="originCurrency">
-                <Options/>
+            <label 
+                className='block mb-2 text-sm font-medium text-white'
+                htmlFor={nameCurrency}>{nameCurrency}</label>
+
+            <select className=' text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500' 
+                name="originCurrency" 
+                id={nameCurrency}>
+                    <Options/>
             </select> 
         </>
     )
